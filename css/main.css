@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+/* 메인 비주얼 */
+.main_visual{
+  background-image: url('../images/main_visual_bg.jpg');
+  background-size: 140%;
+  background-position: -200px -20px;
+  background-repeat: no-repeat;
+  height: 510px; width: 100%;
+}
+.main_visual .inner{
+  width: 1400px; height: 510px;
+  margin: 0 auto;
+  position: relative;
+}
+.main_visual img{
+  width: 500px;
+  position: absolute;
+  left: 80px; bottom: 40px;
+  display: none;
+}
+.main_visual .text{
+  position: absolute;
+  top: 150px; right: 160px;
+  display: none;
+}
+.main_visual .text p{
+  font-size: 38px;
+  font-family: 'Nanum Myeongjo', serif;
+  color: #fff;
+  text-align: right;
+  margin-bottom: 40px;
+  font-weight: 700;
+  line-height: 55px;
+}
+.main_visual .v_btn{
+  background: #fff;
+  color: #366CC7;
+  border: 1px solid #fff;
+  display: block;
+  transform: translateX(120px);
+}
+.main_visual .v_btn:hover{
+  background: #366CC7;
+  color: #fff;
+  border: 1px solid #366CC7;
+}
+
+/* 공식몰 */
+.shop .inner{
+  width: 800px; height: 210px;
+  margin: 0 auto;
+  position: relative;
+}
+.shop .logo_img{
+  background-image: url('../images/logo.png');
+  background-size: 100%;
+  width: 270px; height: 117px;
+  display: inline-block;
+}
+.shop .text{
+  display: inline-block;
+  margin-left: 100px;
+}
+.shop .title{
+  font-family: 'Nanum Myeongjo', serif;
+  color: #031A5E;
+  font-size: 30px;
+  font-weight: 700;
+}
+.shop .txt{
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 10px;
+}
+.shop .s_btn{
+  background: #366CC7;
+  color: #fff;
+  position: absolute;
+  right: 0; top: 60px;
+}
+.shop .s_btn:hover{
+  background: #fff;
+  color: #366CC7;
+}
+
+/* 광고 */
+.youtube{height: 735px;}
+.youtube .inner{
+  width: 1200px; height: 675px;
+  margin: 0 auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+}
+.youtube video{
+  width: 1200px;
+}
+
+/* 슬라이드 */
+.promotion{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  height: 480px;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+.proSlide{
+  width: calc(819px * 3 + 10px * 2); /*2477*/ /*띄어쓰기 주의*/
+  height: 480px;
+  flex-shrink: 0;
+  position: relative;
+}
+.proSlide .swiper-slide{
+  text-align: center;
+  position: relative;
+  opacity: .4;
+  transition: opacity 1;
+}
+.proSlide .swiper-slide-active{opacity: 1;}
+.swiper-pagination{
+  bottom: 40px !important;
+  z-index: 1;
+}
+.swiper-pagination .swiper-pagination-bullet{
+  background-color: rgba(0, 0, 0, .5);
+  width: 10px; height: 10px;
+  margin-right: 10px;
+}
+.swiper-pagination .swiper-pagination-bullet:last-child{
+  margin-right: 0px;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+  background: #031A5E;
+}
+
+.promotion .swiper-button-prev, .promotion .swiper-button-next{
+  width: 42px; height: 42px;
+  border: 2px solid #031A5E;
+  border-radius: 50%;
+  top: 310px;
+  z-index: 1;
+  color: #031A5E;
+  transition: .3s;
+}
+.promotion .swiper-button-prev{
+  left: 50%;
+  margin-left: -480px;
+}
+.promotion .swiper-button-next{
+  right: 50%;
+  margin-right: -480px;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover{
+  background: #031A5E;
+  color: #fff;
+}
+.swiper-button-prev::after, .swiper-button-next::after{display: none;}
+
+.swiper-slide .btn{
+  position: absolute;
+  bottom: 170px; left: 138px; right: 0;
+  background: #366CC7;
+  color: #fff;
+}
+.swiper-slide .btn:hover{
+  background: #fff;
+  color: #366CC7;
+}
+
+/* 제품 */
+.product{
+  background-image: url('../images/brand_1920x470-web.jpg');
+  width: 100%;
+}
+.product .inner{
+  width: 1400px; height: 460px;
+}
+
+/* 브랜드 키워드 */
+.brand .inner{
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.brand .inner a > div{overflow: hidden;}
+.brand .keyword01{
+  background-image: url('../images/keyword_img_01.jpg');
+  background-size: 230%;
+  background-position: -180px 0;
+  width: 348px; height: 442px;
+}
+.brand .keyword02{
+  background-image: url('../images/keyword_img_02.jpg');
+  background-size: 230%;
+  background-position: -180px 0;
+  width: 348px; height: 442px;
+}
+.brand .keyword03{
+  background-image: url('../images/keyword_img_03.jpg');
+  width: 348px; height: 442px;
+}
+
+.brand .text{
+  width: 275px; height: 110px;
+  background: #fff;
+  transform: translateY(350px);
+  margin: 0 auto;
+  transition: .5s;
+}
+.brand .inner div:hover > .text{
+  height: 160px;
+  transform: translateY(250px);
+  background: rgba(255,255,255,.9);
+}
+
+.brand .text .title{
+  font-family: 'Nanum Myeongjo', serif;
+  color: #031A5E;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+.brand .text .txt{
+  font-size: 14px;
+  text-align: center;
+}
+.brand .text span{
+  font-size: 34px;
+  text-align: center;
+  display: block;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: .5s;
+}
+.brand .inner div:hover > .text span{opacity: 1;}
+
+/* 향기의 비밀 */
+.dwony{
+  width: 100%; height: 400px;
+  background-image: url('../images/dwony_bg.jpg');
+  background-position: 0 -610px;
+}
+.dwony .inner{
+  width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+}
+.dwony .inner img{
+  position: absolute;
+  right: 60px; top: 100px;
+}
+.dwony .text{
+  width: 500px;
+  position: absolute;
+  left: 60px; top: 100px;
+}
+.dwony .text .title{
+  font-family: 'Nanum Myeongjo', serif;
+  color: #031A5E;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.dwony .text .txt{
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.dwony .btn{
+  background: #366CC7;
+  color: #fff;
+}
+.dwony .btn:hover{
+  background: #fff;
+  color: #366CC7;
+}
+
+/* 안심하고 쓰는 다우니 */
+.sefe{
+  height: 640px; width: 100%;
+  background-image: url('../images/sefe_dwony_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: 0 -1000px;
+}
+.sefe .inner{
+  width: 1000px; height: 640px;
+  color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sefe .icon{
+  position: absolute;
+  left: 80px; top: 140px;
+}
+.sefe span{
+  font-size: 300px;
+  display: block;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, .8);
+  margin-bottom: 30px;
+}
+.sefe .btn{
+  background: #fff;
+  border: 1px solid #fff;
+  color: #366CC7;
+  transform: translateX(85px);
+}
+.sefe .btn:hover{
+  background: #366CC7;
+  border: 1px solid #366CC7;
+  color: #fff;
+}
+
+.sefe .text{
+  text-align: right;
+  position: absolute;
+  right: 80px; top: 210px;
+}
+.sefe .text .title{
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700px;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, .8);
+}
+.sefe .text .txt{
+  font-size: 28px;
+  font-weight: 400;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, .8);
+}
+
+/* etc */
+.etc{
+  width: 100%; height: 770px;
+}
+.etc .more .qna, .etc .more .contact{
+  background: #253394;
+  border-radius: 20px;
+}
+
+/* 화면 스크롤 동작시 움직이는 서식 */
+.back-to-position{
+  opacity: 0;
+  transition-duration: 1s;
+}
+.back-to-position.to-left{
+  transform: translateX(-150px);
+}
+.back-to-position.to-right{
+  transform: translateX(150px);
+}
+.show .back-to-position{
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-1{transition-delay: .3s;}
+.show .back-to-position.delay-2{transition-delay: .6s;}
+.show .back-to-position.delay-3{transition-delay: .9s;}
