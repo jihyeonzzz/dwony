@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
+main{margin-top: 120px;}
+
 /* 메인 비주얼 */
 .main_visual{
   background-image: url('../images/main_visual_bg.jpg');
@@ -160,7 +162,7 @@
 }
 .swiper-button-prev::after, .swiper-button-next::after{display: none;}
 
-.swiper-slide .btn{
+.promotion .swiper-slide .btn{
   position: absolute;
   bottom: 170px; left: 138px; right: 0;
   background: #366CC7;
@@ -174,11 +176,50 @@
 /* 제품 */
 .product{
   background-image: url('../images/brand_1920x470-web.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   width: 100%;
 }
 .product .inner{
   width: 1400px; height: 460px;
+  margin: 0 auto;
 }
+.product .mySwiper{
+  width: 1100px; height: 320px;
+  transform: translateX(-140px);
+  padding: 70px 0;
+}
+.product .swiper-slide{
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product .img{margin-left: 200px;}
+.product .img img{width: 320px;}
+
+.product .t_box{
+  padding-top: 120px;
+}
+.product .text .title{
+  font-family: 'Nanum Myeongjo', serif;
+  color: #031A5E;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.product .text .txt{
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.product .btn_box .btn01{
+  background: #366CC7; color: #fff;
+  margin: 30px 20px 0 0;
+}
+.product .btn_box .btn01:hover{background: #fff; color: #366CC7;}
+.product .btn_box .btn02{background: #fff; color: #366CC7;}
+.product .btn_box .btn02:hover{background: #366CC7; color: #fff;}
 
 /* 브랜드 키워드 */
 .brand .inner{
@@ -274,7 +315,11 @@
   margin-bottom: 30px;
 }
 
-.dwony .btn{
+.dwony .btn_box{
+  position: absolute;
+  top: 240px; left: 60px;
+}
+.dwony .btn_box .btn{
   background: #366CC7;
   color: #fff;
 }
@@ -309,6 +354,11 @@
   text-shadow: 4px 4px 8px rgba(0, 0, 0, .8);
   margin-bottom: 30px;
 }
+
+.sefe .btn_box{
+  position: absolute;
+  bottom: 110px; left: 80px;
+}
 .sefe .btn{
   background: #fff;
   border: 1px solid #fff;
@@ -340,12 +390,110 @@
 }
 
 /* etc */
-.etc{
-  width: 100%; height: 770px;
+.etc{width: 100%;}
+.etc .inner{
+  display: flex;
+  /* width: 1400px; */
+  justify-content: center;
+  padding: 50px 0 80px 0;
+}
+.etc .img{
+  width: 650px; height: 490px;
+  background-image: url('../images/use_img.jpg');
+  background-size: 140%;
+  background-repeat: no-repeat;
+  margin-right: 25px;
 }
 .etc .more .qna, .etc .more .contact{
   background: #253394;
   border-radius: 20px;
+  width: 380px; height: 92px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  border: 1px solid #253394;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.etc .more .qna:hover, .etc .more .contact:hover{
+  background: #fff;
+}
+.etc .more .qna p, .etc .more .contact p, .etc .more .qna span, .etc .more .contact span{
+  color: #fff;
+  line-height: 92px;
+  transition: .4s;
+}
+.etc .more .qna p, .etc .more .contact p{
+  font-size: 30px;
+  width: 190px;
+  text-align: center;
+}
+.etc .more .qna span, .etc .more .contact span{
+  font-size: 50px;
+  display: block;
+}
+.etc .more .qna:hover p, .etc .more .contact:hover p, .etc .more .qna:hover span, .etc .more .contact:hover span{
+  color: #253394;
+}
+.etc .more .qna:hover .arrow, .etc .more .contact:hover .arrow{
+  animation: ani03 infinite 3s;
+}
+@keyframes ani03{
+  0%{transform: translateX(0px);}
+  50%{transform: translateX(10px);}
+  100%{transform: translateX(0px);}
+}
+
+.etc .text{
+  width: 520px; height: 236px;
+  position: relative;
+}
+.etc .text .title{
+  font-family: 'Nanum Myeongjo', serif;
+  color: #031A5E;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 40px 0 20px 30px;
+}
+.etc .box01{
+  width: 2px; height: 100px;
+  background: #031A5E;
+  position: absolute;
+  left: 20px; top: 50px;
+}
+.etc .text .list{margin-left: 50px;}
+.etc .text .list li .l_txt{
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #031A5E;
+  display: inline-block;
+  width: 100px;
+}
+.etc .text .list li a{
+  color: #333;
+  font-size: 14px;
+}
+.etc .text .list li a:hover{text-decoration: underline;}
+.etc .text .list li a:hover span{
+  animation: ani02 infinite 2s;
+  color: #031A5E;
+  transition: .3s;
+}
+@keyframes ani02{
+  0%{transform: translateX(0px) translateY(3px);}
+  50%{transform: translateX(4px) translateY(3px);}
+  100%{transform: translateX(0px) translateY(3px);}
+}
+.etc .text .list li .material-icons{
+  transform: translateY(3px);
+  font-size: 16px;
+}
+.etc .text .txt{
+  font-size: 20px;
+  margin: 30px 0 0 50px;
+  line-height: 30px;
 }
 
 /* 화면 스크롤 동작시 움직이는 서식 */

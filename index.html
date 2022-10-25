@@ -19,6 +19,9 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 
+  <!-- 부드러운 애니메이션 스크립트 소스 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
   <!-- 스크롤 매직 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 
@@ -318,16 +321,58 @@
 
     <article class="product scroll-spy">
       <div class="inner">
-        <div class="swiper mySwiper back-to-position to-left">
+        <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">
+              <div class="img back-to-position to-left">
+                <img src="./images/product01.png" alt="다우니 섬유유연제">
+              </div>
+              <div class="t_box">
+                <div class="text back-to-position to-left delay-1">
+                  <p class="title">다우니 섬유유연제</p>
+                  <p class="txt">미세 먼지는 막고 오래오래 향기롭게!<br>
+                  다우니의 다양한 섬유유연제의 성분을 확인하고 안전하게 구매하세요.</p>
+                </div>
+                <div class="btn_box back-to-position to-left delay-2">
+                  <a href="#" title="자세히 보기" class="btn btn01">자세히 보기</a>
+                  <a href="#" title="구매하기" class="btn btn02">구매하기</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img back-to-position to-left">
+                <img src="./images/product02.png" alt="다우니 세탁세제">
+              </div>
+              <div class="t_box">
+                <div class="text back-to-position to-left delay-1">
+                  <p class="title">다우니 세탁세제</p>
+                  <p class="txt">100가지 얼룩도 단 1번의 빨래로 깔끔하게 해결<br>
+                  다우니의 다양한 세탁세제의 성분을 확인하고 안전하게 구매하세요.</p>
+                </div>
+                <div class="btn_box back-to-position to-left delay-2">
+                  <a href="#" title="자세히 보기" class="btn btn01">자세히 보기</a>
+                  <a href="#" title="구매하기" class="btn btn02">구매하기</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img back-to-position to-left">
+                <img src="./images/product03.png" alt="다우니 향기부스터">
+              </div>
+              <div class="t_box">
+                <div class="text back-to-position to-left delay-1">
+                  <p class="title">다우니 향기부스터</p>
+                  <p class="txt">세제 넣기 전 툭 넣으면 향기가 12주 동안!<br>
+                  다우니의 다양한 향기부스터의 성분을 확인하고 안전하게 구매하세요.</p>
+                </div>
+                <div class="btn_box back-to-position to-left delay-2">
+                  <a href="#" title="자세히 보기" class="btn btn01">자세히 보기</a>
+                  <a href="#" title="구매하기" class="btn btn02">구매하기</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
-        <div class="text back-to-position to-right"></div>
       </div>
     </article>
 
@@ -373,7 +418,7 @@
           <p class="title">다우니의 혁신으로<br>만들어진 향기입니다</p>
           <p class="txt">보송보송하게 잘 마른 수건, 어린 시절 엄마 품에서 나던 향기, 그리고 베개를 베었을 때의 편안함. 다우니의 혁신은 50여년 간 소비자들의 추억을 만들어 왔습니다.</p>
         </div>
-        <div class="btn_bow back-to-position to-left delay-1">
+        <div class="btn_box back-to-position to-left delay-1">
           <a href="#" title="자세히 보기" class="btn">자세히 보기</a>
         </div>
         <img src="./images/dwony_img.png" alt="다우니 향기의 비밀" class="back-to-position to-right delay-2">
@@ -401,17 +446,43 @@
     <article class="etc">
       <div class="inner">
         <div class="img"></div>
-        <div class="text"></div>
         <div class="more">
-          <div class="qna">
+          <a href="#" title="자주 묻는 질문" class="qna">
             <span class="material-icons">question_answer</span>
             <p class="title">자주 묻는 질문</p>
-            <span class="material-icons">chevron_right</span>
-          </div>
-          <div class="contact">
+            <span class="material-icons arrow">chevron_right</span>
+          </a>
+
+          <a href="#" title="문의하기" class="contact">
             <span class="material-icons">call</span>
             <p class="title">문의하기</p>
-            <span class="material-icons">chevron_right</span>
+            <span class="material-icons arrow">chevron_right</span>
+          </a>
+
+          <div class="text">
+            <p class="title">다우니 사용법</p>
+            <div class="box01"></div>
+            <ul class="list">
+              <li>
+                <span class="l_txt">섬유유연제</span>
+                <a href="#" title="섬유유연제">다우니 섬유유연제 사용법 보러가기
+                  <span class="material-icons">keyboard_double_arrow_right</span>
+                </a>
+              </li>
+              <li>
+                <span class="l_txt">세탁세제</span>
+                <a href="#" title="세탁세제">다우니 세탁세제 사용법 보러가기
+                  <span class="material-icons">keyboard_double_arrow_right</span>
+                </a>
+              </li>
+              <li>
+                <span class="l_txt">향기부스터</span>
+                <a href="#" title="향기부스터">다우니 향기부스터 사용법 보러가기
+                  <span class="material-icons">keyboard_double_arrow_right</span>
+                </a>
+              </li>
+            </ul>
+            <p class="txt">다우니의 섬유유연제, 세탁세제, 향기 부스터<br>사용법을 보고 따라해보세요.</p>
           </div>
         </div>
       </div>
@@ -505,7 +576,7 @@
         loop: true,
         centeredSlides: true,
         autoplay: {
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         },
         pagination: {
