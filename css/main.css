@@ -235,16 +235,32 @@ main{margin-top: 120px;}
   background-size: 230%;
   background-position: -180px 0;
   width: 348px; height: 442px;
+  transition: .5s;
+}
+.brand .keyword01:hover{
+  background-size: 240%;
+  background-position: -195px -10px;
 }
 .brand .keyword02{
   background-image: url('../images/keyword_img_02.jpg');
   background-size: 230%;
   background-position: -180px 0;
   width: 348px; height: 442px;
+  transition: .5s;
+}
+.brand .keyword02:hover{
+  background-size: 240%;
+  background-position: -195px -10px;
 }
 .brand .keyword03{
   background-image: url('../images/keyword_img_03.jpg');
+  background-size: 230%;
   width: 348px; height: 442px;
+  transition: .5s;
+}
+.brand .keyword03:hover{
+  background-size: 240%;
+  background-position: -10px -10px;
 }
 
 .brand .text{
@@ -397,13 +413,12 @@ main{margin-top: 120px;}
   justify-content: center;
   padding: 50px 0 80px 0;
 }
-.etc .img{
+.etc #img{
   width: 650px; height: 490px;
-  background-image: url('../images/use_img.jpg');
-  background-size: 140%;
-  background-repeat: no-repeat;
   margin-right: 25px;
+  overflow: hidden;
 }
+.etc #img img{height: 100%;}
 .etc .more .qna, .etc .more .contact{
   background: #253394;
   border-radius: 20px;

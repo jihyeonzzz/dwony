@@ -7,12 +7,16 @@ $(function(){
   $('#st_btn').click(function(){
     $('.sitemap_wrap').fadeIn();
   });
-  $('#c_btn').click(function(){
+  $('#c_btn02').click(function(){
     $('.sitemap_wrap').hide();
   });
 
   $('.main_visual .inner img').delay(500).fadeIn();
   $('.main_visual .inner .text').delay(1000).fadeIn();
+
+  $('#c_btn01').click(function(){
+    $('.sh_box').slideUp();
+  });
 
 });
 
@@ -50,3 +54,9 @@ window.addEventListener('scroll', function(){
     gsap.to(topBtnEl, 0.6,{opacity:0});
   }
 });
+
+// 새로고침 시 사진 랜덤으로 나타내기
+let ran = Math.random();
+
+ran = Math.ceil(ran*3);
+document.getElementById('img').innerHTML='<img src="./images/use_img_0'+ran+'.jpg" alt="다우니">';
