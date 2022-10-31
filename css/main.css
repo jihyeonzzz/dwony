@@ -120,7 +120,7 @@ main{margin-top: 120px;}
   text-align: center;
   position: relative;
   opacity: .4;
-  transition: opacity 1;
+  /* transition: opacity 1; */
 }
 .proSlide .swiper-slide-active{opacity: 1;}
 .swiper-pagination{
@@ -416,7 +416,7 @@ main{margin-top: 120px;}
 .etc #img{
   width: 650px; height: 490px;
   margin-right: 25px;
-  overflow: hidden;
+  overflow: hiddenZZ;
 }
 .etc #img img{height: 100%;}
 .etc .more .qna, .etc .more .contact{
